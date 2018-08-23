@@ -1,5 +1,6 @@
 var express = require('express');
 var hbs = require('hbs');
+const port = process.env.PORT || 3000;
 var app = express();
 app.set('vgvg','hbs');
 hbs.registerPartials(__dirname + '/views/partials' );
@@ -24,7 +25,7 @@ app.get('/about1',(req,res) => {
     });
 
 });
-app.listen(3000,() =>
+app.listen(port,() =>
 {
-  console.log("odidi");
+  console.log(`odd ${port}`);
 })
